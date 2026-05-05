@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="week5_ex02_style.css" />
+  </head>
+  <body>
+    <input type="radio" name="filter" id="all" checked />
+    <input type="radio" name="filter" id="landscape" />
+    <input type="radio" name="filter" id="portrait" />
+    <input type="radio" name="filter" id="architecture" />
+
+    <header>
+      <h1 class="gallery-title">My Gallery</h1>
+      <p class="gallery-description">Welcome to my gallery!</p>
+    </header>
+
+    <div class="filter-bar">
+      <label for="all">All</label>
+      <label for="landscape">Landscape</label>
+      <label for="portrait">Portrait</label>
+      <label for="architecture">Architecture</label>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Landscape Images -->
+      <div class="card landscape">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1768210837703-6fe5f5afbaa9?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
+            alt="Beautiful Nature Landscape"
+          />
+          <div class="card-overlay">
+            <p>Sunrise over misty mountains</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Mountain Sunrise</h3>
+          <span class="card-tag tag-landscape">Landscape</span>
+        </div>
+      </div>
+
+      <div class="card landscape">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"
+            alt="Alpine Dawn"
+          />
+          <div class="card-overlay">
+            <p>Sunrise over the alpine peaks</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Alpine Dawn</h3>
+          <span class="card-tag tag-landscape">Landscape</span>
+        </div>
+      </div>
+
+      <div class="card landscape">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&q=80"
+            alt="Orange Flowers"
+          />
+          <div class="card-overlay">
+            <p>Colorful orange flowers in a field</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Orange Flowers</h3>
+          <span class="card-tag tag-landscape">Landscape</span>
+        </div>
+      </div>
+
+      <div class="card landscape">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1777195680745-9fb67291b216?w=600&q=80"
+            alt="The Moon"
+          />
+          <div class="card-overlay">
+            <p>The light hitting the side of the moon</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">The Moon</h3>
+          <span class="card-tag tag-landscape">Landscape</span>
+        </div>
+      </div>
+
+      <!-- Portrait Images -->
+      <div class="card portrait">
+        <div class="card-img-wrap">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1681489930334-b0d26fdb9ed8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8MHx8fDA%3D"
+            alt="Portrait 1"
+          />
+          <div class="card-overlay">
+            <p>Professional portrait session</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Professional Portrait</h3>
+          <span class="card-tag tag-portrait">Portrait</span>
+        </div>
+      </div>
+
+      <div class="card portrait">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1553150858-ad6fda08b9e3?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHN0cmVldCUyMHBvcnRyYWl0fGVufDB8fDB8fHww"
+            alt="Portrait 2"
+          />
+          <div class="card-overlay">
+            <p>Candid street photography</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Street Portrait</h3>
+          <span class="card-tag tag-portrait">Portrait</span>
+        </div>
+      </div>
+
+      <div class="card portrait">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1646526822732-4eb6415320a2?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RWxlZ2FudCUyMGZhc2hpb24lMjBwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Portrait 3"
+          />
+          <div class="card-overlay">
+            <p>Elegant fashion portrait</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Fashion Portrait</h3>
+          <span class="card-tag tag-portrait">Portrait</span>
+        </div>
+      </div>
+
+      <div class="card portrait">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29ycG9yYXRlJTIwaGVhZHNob3R8ZW58MHx8MHx8fDA%3D"
+            alt="Portrait 4"
+          />
+          <div class="card-overlay">
+            <p>Corporate headshot</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Corporate Portrait</h3>
+          <span class="card-tag tag-portrait">Portrait</span>
+        </div>
+      </div>
+
+      <!-- Architecture Images -->
+      <div class="card architecture">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+            alt="Modern Building"
+          />
+          <div class="card-overlay">
+            <p>Contemporary skyscraper design</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Modern Skyscraper</h3>
+          <span class="card-tag tag-architecture">Architecture</span>
+        </div>
+      </div>
+
+      <div class="card architecture">
+        <div class="card-img-wrap">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1697730291430-b2eabbd480f6?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGlzdG9yaWMlMjBjYXRoZWRyYWx8ZW58MHx8MHx8fDA%3D"
+            alt="Historic Architecture"
+          />
+          <div class="card-overlay">
+            <p>Historic cathedral architecture</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Historic Cathedral</h3>
+          <span class="card-tag tag-architecture">Architecture</span>
+        </div>
+      </div>
+
+      <div class="card architecture">
+        <div class="card-img-wrap">
+          <img
+            src="https://media.istockphoto.com/id/2259827381/photo/golden-gate-bridge-at-sunset-with-fog.webp?a=1&b=1&s=612x612&w=0&k=20&c=c2oXQe1TeEwxFO_pWfAIy2rjwYOyz3cYBMvw18IPZBo="
+            alt="Bridge Architecture"
+          />
+          <div class="card-overlay">
+            <p>Iconic bridge engineering</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Golden Gate Bridge</h3>
+          <span class="card-tag tag-architecture">Architecture</span>
+        </div>
+      </div>
+
+      <div class="card architecture">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW9kZXJuJTIwaG9tZXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Residential Architecture"
+          />
+          <div class="card-overlay">
+            <p>Modern home design with clean lines</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Modern Home</h3>
+          <span class="card-tag tag-architecture">Architecture</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 My Gallery.</p>
+    </footer>
+  </body>
+</html>
