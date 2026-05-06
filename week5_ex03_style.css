@@ -1,0 +1,444 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #111116;
+  color: #f2f2f2;
+}
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(10, 10, 30, 0.96);
+  z-index: 10;
+  gap: 1rem;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.loading-text {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  animation: textFade 1.2s ease 0.5s forwards;
+}
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(5, 5, 20, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.75rem 1.5rem;
+}
+
+.animated-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  animation: navSlideIn 0.8s ease-out forwards;
+}
+
+.nav-item {
+  opacity: 0;
+  transform: translateY(-12px);
+  animation: navFadeIn 0.6s ease-out forwards;
+}
+
+.nav-item.item-1 {
+  animation-delay: 0.1s;
+}
+.nav-item.item-2 {
+  animation-delay: 0.2s;
+}
+.nav-item.item-3 {
+  animation-delay: 0.3s;
+}
+.nav-item.item-4 {
+  animation-delay: 0.4s;
+}
+.nav-item.item-5 {
+  animation-delay: 0.5s;
+}
+.nav-item.item-6 {
+  animation-delay: 0.6s;
+}
+
+.animated-nav a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-weight: 600;
+  position: relative;
+  transition:
+    color 0.25s ease,
+    transform 0.3s ease;
+}
+
+.animated-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: #f7d117;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.animated-nav a:hover {
+  color: #ff6347;
+  transform: translateY(-2px);
+}
+
+.animated-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.animated-nav:hover .nav-item {
+  animation-play-state: paused;
+}
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-image:
+    linear-gradient(135deg, rgba(20, 20, 35, 0.9), rgba(28, 28, 55, 0.95)),
+    url("https://images.unsplash.com/photo-1525011268546-59722dd2d1b8?auto=format&fit=crop&w=1600&q=80");
+  background-size: 220% 220%;
+  background-position: 0% 50%;
+  animation: heroBackground 15s ease infinite;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 20% 5% auto auto;
+  width: 260px;
+  height: 260px;
+  background: rgba(247, 209, 23, 0.12);
+  transform: skew(-12deg);
+  filter: blur(12px);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.08),
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 760px;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  color: #ffffff;
+}
+
+.hero p {
+  margin: 0 auto 2rem;
+  max-width: 36rem;
+  font-size: 1.1rem;
+  color: #d9d9d9;
+  opacity: 0.95;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff6347, #f7d117);
+  color: #111116;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 18px 40px rgba(247, 209, 23, 0.2);
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    box-shadow 0.35s ease;
+  animation: pulseCTA 2.5s ease-in-out infinite;
+}
+
+.cta-button:hover {
+  transform: scale(1.06) translateY(-2px);
+  animation-play-state: paused;
+  box-shadow: 0 22px 45px rgba(247, 209, 23, 0.35);
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.product-card {
+  background: rgba(15, 15, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+  transform: translateY(30px);
+  opacity: 0;
+  animation: cardSlideIn 0.9s ease-out forwards;
+}
+
+.product-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.product-card:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.product-card:nth-child(3) {
+  animation-delay: 0.35s;
+}
+.product-card:nth-child(4) {
+  animation-delay: 0.45s;
+}
+.product-card:nth-child(5) {
+  animation-delay: 0.55s;
+}
+.product-card:nth-child(6) {
+  animation-delay: 0.65s;
+}
+
+.card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+  transform-origin: center;
+}
+
+.card-img-wrap:hover img {
+  transform: scale(1.08) rotate(1.5deg);
+  opacity: 0.95;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.card-img-wrap:hover .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: rgba(247, 209, 23, 0.18);
+  color: #f7d117;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.card-tag:hover {
+  transform: skew(-8deg) scale(1.02);
+}
+
+.icon-rotate {
+  display: inline-block;
+  transform-origin: center;
+  transition: transform 0.35s ease;
+}
+
+.card-tag:hover .icon-rotate {
+  transform: rotate(20deg);
+}
+
+.card-button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff6347, #f7d117);
+  color: #111116;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-button:hover {
+  transform: scale(1.03) translateY(-2px);
+  opacity: 0.95;
+  box-shadow: 0 18px 40px rgba(247, 209, 23, 0.18);
+}
+
+.footer-note {
+  text-align: center;
+  padding: 2rem 1.5rem 3rem;
+  color: #c2c2c2;
+}
+
+@keyframes heroBackground {
+  0% {
+    background-position: 0% 40%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  100% {
+    background-position: 0% 40%;
+  }
+}
+
+@keyframes navSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shield-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cardSlideIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseCTA {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.shield-spinner {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 10px solid rgba(255, 99, 71, 0.18);
+  border-top-color: #ff6347;
+  border-right-color: #f7d117;
+  border-bottom-color: #ffffff;
+  border-left-color: #00a3ff;
+  animation: shield-spin 1.5s linear infinite;
+}
