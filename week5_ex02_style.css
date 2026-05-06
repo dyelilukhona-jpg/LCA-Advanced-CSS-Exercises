@@ -79,7 +79,6 @@ header p {
   background-color: #1a1a1a;
   border: 1px solid #2a2a2a;
   overflow: hidden;
-
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
