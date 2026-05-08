@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Products Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .ticker-wrap {
+      width: 100%;
+      overflow: hidden;
+      background-color: #d3d3d3;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .ticker-move {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker 20s linear infinite;
+      white-space: nowrap;
+      color: black;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    @keyframes ticker {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-100%, 0);
+      }
+    }
+
+    .ticker-container {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-spacer {
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body class="bg-dark text-white">
+  <div class="ticker-wrap">
+    <div class="ticker-move fw-bold">FLASH SALE: Use code DEV20 for 20% off all digital services! - Limited time only - Digital Solutions Studio</div>
+  </div>
+
+  <div class="ticker-spacer"></div>
+
+  <main>
+    <section class="py-5">
+      <div class="container mt-5">
+        <h2 class="text-center mt-5 mb-5 display-4 fw-bold">Our Services</h2>
+        <div class="row row-cols-1 rows-cols-md-2 row-cols-lg-4 g-4">
+          <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 bg-100 bg-dark text-white border-secondary shadow">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" class="card-img-top" alt="Web Dev">
+              <div class="card-body">
+                <h5 class="card-title text-info">Custom Web App</h5>
+                <p>High-performance applications built for modern web standards.</p>
+                <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 bg-dark text-white border-secondary shadow">
+              <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500" class="card-img-top" alt="Mobile Dev">
+              <div class="card-body">
+                <h5 class="card-title text-info">Mobile App Development</h5>
+                <p>Native iOS and Android apps for your business.</p>
+                <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 bg-dark text-white border-secondary shadow">
+              <img src="https://plus.unsplash.com/premium_photo-1661382011487-cd3d6b1d9dff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dWklMjB1eCUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="UI/UX Design">
+              <div class="card-body">
+                <h5 class="card-title text-info">UI/UX Design</h5>
+                <p>Beautiful and intuitive user interfaces for your digital products.</p>
+                <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col" data-aos="fade-up" data-aos-delay="400">
+            <div class="card h-100 bg-dark text-white border-secondary shadow">
+              <img src="https://plus.unsplash.com/premium_photo-1733306493254-52b143296396?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2xvdWQlMjBjb21wdXRpbmd8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Cloud">
+              <div class="card-body">
+                <h5 class="card-title text-info">Cloud Hosting</h5>
+                <p>Scalable and secure cloud hosting solutions for your data.</p>
+                <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 bg-dark text-white border-secondary shadow">
+              <img src="https://images.unsplash.com/photo-1674027001834-719c347d1eca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8U0VPJTIwcmFua2luZ3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="SEO">
+              <div class="card-body">
+                <h5 class="card-title text-info">SEO Optimization</h5>
+                <p>Improve your search engine rankings and online visibility.</p>
+                <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 bg-dark text-white border-secondary shadow">
+              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGF0YSUyMGFuYWx5dGljc3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Branding">
+              <div class="card-body">
+                <h5 class="card-title text-info">Branding</h5>
+                <p>Develop a strong brand identity for your business.</p>
+                <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 bg-dark text-white border-secondary shadow">
+              <img src="https://plus.unsplash.com/premium_photo-1661764393655-1dbffee8c0ce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Cyber">
+              <div class="card-body">
+                <h5 class="card-title text-info">Cybersecurity</h5>
+                <p>Protect your digital assets with our cybersecurity services.</p>
+                <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col" data-aos="fade-up" data-aos-delay="400">
+            <div class="card h-100 bg-dark text-white border-secondary shadow">
+              <img src="https://plus.unsplash.com/premium_photo-1661878265739-da90bc1af051?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGF0YSUyMGFuYWx5dGljc3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Data">
+              <div class="card-body">
+                <h5 class="card-title text-info">Data Analytics</h5>
+                <p>Transform your data into actionable insights.</p>
+                <a href="#" class="btn btn-outline-light btn-sm mt-auto">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4 mt-5 border-top border-secondary">
+    <div class="container">
+      <p>&copy; 2023 Digital Solutions Studio. All rights reserved.</p>
+    </div>
+  </footer>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
